@@ -36,6 +36,8 @@ namespace Test_Metro.Clases
             //tlq.SaveChanges();
         }
 
+
+
         public static void test2(List<Datos.Adjunto> test1)
         {
             using (var Transac = new TransactionScope())
@@ -76,7 +78,7 @@ namespace Test_Metro.Clases
             }
         }
 
-        public static void test4( test1)
+        public static void test4(List<Datos.Adjunto> test1)
         {
             try
             {
@@ -89,9 +91,62 @@ namespace Test_Metro.Clases
             catch (Exception ex)
             {
                 tlq.Dispose();
-                //throw;
             }
         }
+
+
+
+
+
+
+        public static void transac(List<Datos.Adjunto> test1)
+        {
+            //using (var Transac = new TransactionScope())
+            //{
+                try
+                {
+                    for (int i = 0; i < test1.Count; i++)
+                    {
+                        if (i == 1)
+                        {
+                            transac2();
+                        }
+                        tlq.Adjunto.Add(test1[i]);
+                    }
+                    tlq.SaveChanges();
+                    transac2();
+                    //Transac.Complete();
+                }
+                catch (Exception ex)
+                {
+                    //Transac.Dispose();
+                    throw;
+                }
+            //}
+        }
+
+        public static void transac2()
+        {
+            var oTicket = new Datos.Adjunto
+            {
+                Archivo = "transac2",
+                Ruta = "transac2"
+            };
+            tlq.Adjunto.Add(oTicket);
+            tlq.SaveChanges();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
         public static bool guar(string val1)
         {

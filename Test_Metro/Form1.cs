@@ -88,16 +88,23 @@ namespace Test_Metro
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
-            var a = new Datos.Adjunto();
+            //var a = new Datos.Adjunto();
+
+            //List<Datos.Adjunto> a1 = new List<Adjunto>();
+            //a1.Add(new Adjunto { Archivo = "sdf", Ruta = "dsfsdf" });
+            //a1.Add(new Adjunto { Archivo = "sdf2", Ruta = "dsfsdf2" });
+            
+            //a = new Adjunto { Archivo = "sdf", Ruta = "dsfsdf" };
+
+            ////Master_Save.test1();
+            //Master_Save.test3(a1);
 
             List<Datos.Adjunto> a1 = new List<Adjunto>();
-            a1.Add(new Adjunto { Archivo = "sdf", Ruta = "dsfsdf" });
-            a1.Add(new Adjunto { Archivo = "sdf2", Ruta = "dsfsdf2" });
-            
-            a = new Adjunto { Archivo = "sdf", Ruta = "dsfsdf" };
-
-            //Master_Save.test1();
-            Master_Save.test3(a1);
+            a1.Add(new Adjunto { Archivo = "transac10", Ruta = "transac10" });
+            a1.Add(new Adjunto { Archivo = "transac11", Ruta = "transac11" });
+            a1.Add(new Adjunto { Archivo = "transac12", Ruta = "transac12" });
+            Master_Save.transac(a1);
+            //Master_Save.transac2();
         }
 
 
