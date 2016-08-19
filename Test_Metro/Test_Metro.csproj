@@ -51,6 +51,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Adjunto2.cs" />
+    <Compile Include="Clases\Master_Save.cs" />
+    <Compile Include="Clases\Modelos.cs" />
     <Compile Include="Datos\Adjunto.cs">
       <DependentUpon>BD1.tt</DependentUpon>
     </Compile>

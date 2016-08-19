@@ -9,6 +9,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Data.SqlClient;
 using System.Transactions;
+using System.Data;
+
 
 
 namespace Test_Metro.Clases
@@ -40,23 +42,28 @@ namespace Test_Metro.Clases
 
         public static bool guar(string val1)
         {
-            try
+            using (var Transac = new TransactionScope())
             {
-                var oTicket = new Datos.Adjunto
+                try
                 {
-                    Archivo = val1,
-                    Ruta = "fdsfdsdfsfdsf/" + val1
-                };
-                tlq.Adjunto.Add(oTicket);
-                tlq.SaveChanges();
-                return true;
+                    var oTicket = new Datos.Adjunto
+                    {
+                        Archivo = val1,
+                        Ruta = "trans/" + val1
+                    };
+                    tlq.Adjunto.Add(oTicket);
+                    tlq.SaveChanges();
+                    //throw new Exception("Put your error message here.");
+                    Transac.Complete();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Transac.Dispose();
+                    return false;
+                    throw;
+                }
             }
-            catch (Exception ex)
-            {
-                return false;
-                throw;
-            }
-            
         }
 
         //public void Guardar(string Varch)
