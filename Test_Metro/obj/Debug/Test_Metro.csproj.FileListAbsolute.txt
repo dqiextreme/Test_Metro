@@ -1,0 +1,14 @@
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\Test_Metro.exe.config
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\Test_Metro.exe
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\Test_Metro.pdb
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\MetroFramework.dll
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.csprojResolveAssemblyReference.cache
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.Form1.resources
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.Properties.Resources.resources
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.csproj.GenerateResource.Cache
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.exe
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\obj\Debug\Test_Metro.pdb
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\MetroFramework.Design.dll
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\MetroFramework.Fonts.dll
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\EntityFramework.dll
+c:\users\asoftware8\documents\visual studio 2012\Projects\Test_Metro\Test_Metro\bin\Debug\EntityFramework.xml

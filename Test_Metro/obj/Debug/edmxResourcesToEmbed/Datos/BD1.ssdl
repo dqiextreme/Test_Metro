@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="test_linqsql1Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="test_linqsql1ModelStoreContainer">
+    <EntitySet Name="Adjunto" EntityType="test_linqsql1Model.Store.Adjunto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="departamento1" EntityType="test_linqsql1Model.Store.departamento1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="test_linqsql1Model.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="into_sel" EntityType="test_linqsql1Model.Store.into_sel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="puesto1" EntityType="test_linqsql1Model.Store.puesto1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="test_linqsql1Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketArchivoAdjunto" EntityType="test_linqsql1Model.Store.TicketArchivoAdjunto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketArchivoAdjunto2" EntityType="test_linqsql1Model.Store.TicketArchivoAdjunto2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TicketArchivoAdjunto3" EntityType="test_linqsql1Model.Store.TicketArchivoAdjunto3" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user1" EntityType="test_linqsql1Model.Store.user1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="view_test_1" EntityType="test_linqsql1Model.Store.view_test_1" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Adjunto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Archivo" Type="nchar" Nullable="false" MaxLength="100" />
+    <Property Name="Ruta" Type="nchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="departamento1">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Gender" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Salary" Type="int" Nullable="false" />
+    <Property Name="ccodsunagro" Type="varchar" Nullable="true" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="into_sel">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="prueba" />
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prueba" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="codigo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="puesto1">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="departamento" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="departamento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="principal_id" />
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TicketArchivoAdjunto">
+    <Key>
+      <PropertyRef Name="TicketArchivoAdjuntoId" />
+    </Key>
+    <Property Name="TicketArchivoAdjuntoId" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TicketId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Url" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TicketArchivoAdjunto2">
+    <Key>
+      <PropertyRef Name="TicketArchivoAdjuntoId" />
+    </Key>
+    <Property Name="TicketArchivoAdjuntoId" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TicketId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Url" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TicketArchivoAdjunto3">
+    <Key>
+      <PropertyRef Name="TicketArchivoAdjuntoId" />
+    </Key>
+    <Property Name="TicketArchivoAdjuntoId" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TicketId" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Url" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="user1">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="cedula" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="puesto" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="cedula" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="puesto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="view_test_1">
+    <Key>
+      <PropertyRef Name="cedula" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="cedula" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Expr1" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>
